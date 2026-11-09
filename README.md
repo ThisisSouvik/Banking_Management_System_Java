@@ -1,1 +1,2 @@
 # Banking_Management_System
+Banking Management System is a console-based Core Java application. It supports savings and current accounts, deposits, withdrawals, fund transfers, transaction history, interest calculation, and account management using Core Java concepts.
