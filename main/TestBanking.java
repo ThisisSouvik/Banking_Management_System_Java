@@ -1,7 +1,8 @@
+
 package main;
 
-import model.Customer;
 import model.Transaction;
+import model.BankAccount;
 
 public class TestBanking {
 
@@ -18,11 +19,9 @@ public class TestBanking {
 
         System.out.println("\n--- CUSTOMER TESTING ---");
 
-        // Customer testing will be added after
-        // introducing a customer creation method.
-
         System.out.println("Customer class compiled successfully.");
         System.out.println("Object creation test: Pending");
+        System.out.println("Reason: Customer constructor is private.");
 
         // ==================================
         // TEST 2: TRANSACTION
@@ -42,7 +41,7 @@ public class TestBanking {
         System.out.println("Transaction 1: " + t1.getTransactionId());
         System.out.println("Transaction 2: " + t2.getTransactionId());
 
-        // Test getters
+        // Test transaction details
         System.out.println("\nTransaction Details:");
 
         System.out.println(t1);
@@ -58,6 +57,27 @@ public class TestBanking {
 
         System.out.println("t1 HashCode: " + t1.hashCode());
         System.out.println("t2 HashCode: " + t2.hashCode());
+
+        // ==================================
+        // TEST 3: BANK ACCOUNT
+        // ==================================
+
+        System.out.println("\n--- BANK ACCOUNT TESTING ---");
+
+        System.out.println("BankAccount class compiled successfully.");
+
+        // Object creation test is pending because
+        // Customer constructor is currently private.
+
+        System.out.println("Account creation test: Pending");
+
+        System.out.println("Deposit test: Pending");
+        System.out.println("Withdrawal test: Pending");
+        System.out.println("Transaction history test: Pending");
+
+        // ==================================
+        // TESTING COMPLETED
+        // ==================================
 
         System.out.println("\n==================================");
         System.out.println("       TESTING COMPLETED");
