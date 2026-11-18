@@ -16,6 +16,25 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
+    // Static factory method: keeps customer creation in one validated path
+    public static Customer create(String name, String phoneNumber) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
+
+        if (phoneNumber == null || phoneNumber.length() != 10) {
+            throw new IllegalArgumentException("Phone number must contain exactly 10 digits.");
+        }
+
+        for (int i = 0; i < phoneNumber.length(); i++) {
+            if (!Character.isDigit(phoneNumber.charAt(i))) {
+                throw new IllegalArgumentException("Phone number must contain exactly 10 digits.");
+            }
+        }
+
+        return new Customer(name.trim(), phoneNumber);
+    }
+
     // Encapsulation: fields are private, accessed through getters/setters
     // customerId has no setter because it should never change
     public int getCustomerId() {
